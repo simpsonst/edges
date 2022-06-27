@@ -35,19 +35,14 @@ headers += edges_version.h
 libraries += edges
 edges_mod += edges
 
-cDOCS += VERSION
-DOCS += README
-DOCS += HISTORY
-DOCS += COPYING
-
 SOURCES:=$(filter-out $(headers),$(shell $(FIND) src/obj \( -name "*.c" -o -name "*.h" \) -printf '%P\n'))
 
 
 riscos_zips += edges
 edges_appname=!EdgesLib
-edges_rof += Docs/COPYING,fff
-edges_rof += Docs/VERSION,fff
-edges_rof += Docs/README,fff
+edges_rof += COPYING,fff
+edges_rof += VERSION,fff
+edges_rof += !Help,fff
 edges_rof += !Boot,feb
 edges_rof += $(call riscos_src,$(SOURCES))
 edges_rof += $(call riscos_hdr,$(headers))
