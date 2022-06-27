@@ -1,0 +1,2 @@
+Set EdgesLib$Dir <Obey$Dir>
+Set EdgesLib$Path <EdgesLib$Dir>.Library.
